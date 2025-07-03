@@ -34,6 +34,16 @@ const Index = () => {
     return () => clearInterval(typingInterval);
   }, [textIndex]);
 
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   const skills = [
     { name: 'Flutter', level: 95, icon: Smartphone, color: 'from-blue-500 to-cyan-500' },
     { name: 'React.js', level: 90, icon: Code, color: 'from-cyan-500 to-blue-500' },
@@ -117,7 +127,10 @@ const Index = () => {
             I create beautiful, responsive applications that deliver exceptional user experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transform hover:scale-105 transition-all duration-300">
+            <Button 
+              onClick={scrollToProjects}
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transform hover:scale-105 transition-all duration-300"
+            >
               View My Work
             </Button>
             <Button variant="outline" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-3 rounded-full text-lg font-semibold transform hover:scale-105 transition-all duration-300">
