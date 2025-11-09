@@ -5,14 +5,13 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: '/vibrant-flutter-folio-showcase/',
   server: {
     host: "::",
     port: 8080,
   },
   plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
+    react()
   ].filter(Boolean),
   resolve: {
     alias: {

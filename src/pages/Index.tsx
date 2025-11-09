@@ -29,10 +29,7 @@ const Index = () => {
   const [textIndex, setTextIndex] = useState(0);
 
   const roles = [
-    "Flutter Developer",
-    "React.js Developer",
-    "Vue.js Developer",
-    "Mobile App Developer",
+    "Flutter Developer"
   ];
 
   useEffect(() => {
@@ -119,6 +116,22 @@ const Index = () => {
   ];
 
   const tools = [
+    // Added Flutter, React.js and Vue.js at top of the list
+    {
+      name: "Flutter",
+      icon: Smartphone,
+      color: "from-blue-500 to-cyan-400",
+    },
+    {
+      name: "React.js",
+      icon: Code,
+      color: "from-cyan-500 to-blue-500",
+    },
+    {
+      name: "Vue.js",
+      icon: Zap,
+      color: "from-green-500 to-teal-500",
+    },
     {
       name: "Visual Studio Code",
       icon: Code,
@@ -137,61 +150,66 @@ const Index = () => {
 
   const companies = [
     {
-      name: "Tech Solutions Inc.",
-      role: "Senior Flutter Developer",
-      duration: "oct 2023 - Present",
+      name: "Touchmark Descience Pvt Ltd",
+      role: "Flutter Developer",
+      duration: "October 2023 - Present",
       description:
-        "Leading mobile app development team, architecting cross-platform solutions, and mentoring junior developers.",
+        "Developed and optimized cross-platform mobile applications with scalable architecture, offline support, and secure authentication. Ensured high performance, reliability, and smooth deployment through CI/CD pipelines.",
       achievements: [
-        "Led 5+ successful app launches",
-        "Improved app performance by 40%",
-        "Mentored 8 junior developers",
+        "Delivered and maintained multiple production-grade apps",
+        "Improved app performance and load time significantly",
+        "Implemented Firebase authentication and real-time features",
+        "Built reusable UI components using GetX and Bloc",
+        "Ensured seamless offline functionality for key applications"
       ],
     },
     {
-      name: "Digital Innovations Ltd.",
-      role: "Full Stack Developer",
-      duration: "2020 - 2022",
+      name: "Neophron Technologies",
+      role: "Project Engineer",
+      duration: "July 2022 – August 2023",
       description:
-        "Developed responsive web applications using React.js and Vue.js, integrated APIs, and collaborated with design teams.",
+        "Led mobile and web development initiatives, building high-quality Flutter and Vue.js applications with seamless payment integrations and strong team collaboration.",
       achievements: [
-        "Built 12+ responsive web apps",
-        "Reduced load time by 35%",
-        "Integrated 20+ third-party APIs",
+        "Developed a full-featured e-commerce app with Stripe and Razorpay integration",
+        "Led technical development, mentoring teammates through reviews and guidance",
+        "Contributed to client projects using Vue.js, improving code quality and performance",
+        "Ensured timely project delivery through effective collaboration and problem-solving"
       ],
     },
     {
-      name: "StartUp Dynamics",
-      role: "Mobile App Developer",
-      duration: "2019 - 2020",
+      name: "Qantler Technologies",
+      role: "Software Developer",
+      duration: "November 2019 – July 2022",
       description:
-        "Created mobile applications from concept to deployment, focusing on user experience and performance optimization.",
+        "Developed end-to-end web and mobile applications using Flutter, React.js, and .NET Core Web API, collaborating across teams to deliver high-quality, client-aligned solutions.",
       achievements: [
-        "Launched 8 mobile apps",
-        "Achieved 4.8+ app store ratings",
-        "Implemented CI/CD pipelines",
+        "Built full-stack applications integrating Flutter, React.js, and .NET Core Web API",
+        "Streamlined development and release cycles through coordination with QA and DevOps teams",
+        "Contributed to requirement analysis and client discussions for feature alignment",
+        "Provided post-deployment support, bug fixes, and team assistance",
+        "Utilized Azure Repos for version control and efficient collaboration",
       ],
     },
   ];
 
   const education = [
     {
-      degree: "Bachelor of Computer Science",
-      institution: "University of Technology",
+      degree: "Bachelor’s in Mechanical Engineering",
+      institution: "Government College of Engineering(GCE)",
       duration: "2015 - 2019",
       grade: "First Class Honours",
       type: "college",
     },
     {
       degree: "12th Grade (Higher Secondary)",
-      institution: "City Public School",
+      institution: "Vidhya Nikethan Matric HR Sec School",
       duration: "2013 - 2015",
       grade: "92%",
       type: "school",
     },
     {
       degree: "10th Grade (Secondary)",
-      institution: "City Public School",
+      institution: "Government HR Sec School",
       duration: "2011 - 2013",
       grade: "95%",
       type: "school",
@@ -200,38 +218,49 @@ const Index = () => {
 
   const projects = [
     {
-      title: "E-Commerce Flutter App",
+      title: "Zenro ",
       description:
-        "A complete e-commerce solution built with Flutter, featuring payment integration, real-time notifications, and smooth animations.",
-      tech: ["Flutter", "Firebase", "Stripe", "Provider"],
-      image: "photo-1649972904349-6e44c42644a7",
-      link: "#",
-    },
-    {
-      title: "React Dashboard",
-      description:
-        "Modern admin dashboard with real-time data visualization, built using React.js and Chart.js with responsive design.",
-      tech: ["React.js", "Chart.js", "Material-UI", "Redux"],
+        "Implemented a Smart Attendance Tracker with optional background location access, featuring geofenced clock-in/out, automated reminders, and privacy-focused tracking to enhance workforce accountability and operational efficiency.",
+      tech: ["Flutter", "Firebase","REST API", "GetX"],
       image: "photo-1488590528505-98d2b5aba04b",
       link: "#",
     },
+    
     {
-      title: "Vue.js Portfolio",
+      title: " Rupini’s",
       description:
-        "Interactive portfolio website showcasing Vue.js capabilities with smooth animations and modern design patterns.",
-      tech: ["Vue.js", "Vuex", "SCSS", "Nuxt.js"],
+        "Rupini’s is a pioneer in holistic Indian beauty and bridal services in Singapore, dedicated to promoting physical and mental well-being through natural, herbal-based treatments offered in a tranquil and rejuvenating environment.",
+      tech: ["Flutter", "Firebase","REST API", "GetX"],
       image: "photo-1486312338219-ce68d2c6f44d",
       link: "#",
     },
     {
-      title: "Cross-Platform Mobile App",
+      title: "AllyCarto",
       description:
-        "Feature-rich mobile application with offline support, push notifications, and seamless user experience.",
-      tech: ["Flutter", "SQLite", "REST API", "BLoC"],
+        "An application designed to help local businesses expand their network and boost sales by enabling customers to place online orders conveniently—empowering local shops to go digital without additional investment.",
+      tech: ["Flutter", "Firebase","REST API"],
+      image: "photo-1649972904349-6e44c42644a7",
+      link: "#",
+    },
+    {
+      title: "TaskTrak Live",
+      description:
+        "TaskTrak Live is one of Europe’s leading lean management consultancies, empowering organizations to deliver measurable value streams through agile project management, sustainable operational performance improvement, and comprehensive employee engagement initiatives.",
+      tech: ["Flutter", "Firebase","REST API", "GetX"],
       image: "photo-1581091226825-a6a2a5aee158",
       link: "#",
     },
   ];
+
+   const sendEmail = () => {
+    const to = "muthuganapathi002@gmail.com";
+    const subject = encodeURIComponent("");
+    const body = encodeURIComponent("");
+    
+    // Gmail compose link
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
@@ -582,7 +611,7 @@ const Index = () => {
                     <Calendar size={16} />
                     <span className="text-sm">{edu.duration}</span>
                   </div>
-                  <Badge
+                  {/* <Badge
                     className={`${
                       edu.type === "college"
                         ? "bg-purple-500/20 text-purple-400 border-purple-500/30"
@@ -590,7 +619,7 @@ const Index = () => {
                     } font-semibold`}
                   >
                     {edu.grade}
-                  </Badge>
+                  </Badge> */}
                 </CardContent>
               </Card>
             ))}
@@ -666,18 +695,32 @@ const Index = () => {
             <Button className="bg-gray-800 hover:bg-gray-700 text-white p-4 rounded-full transform hover:scale-110 transition-all duration-300 animate-scale-in">
               <Github size={24} />
             </Button>
+            <a
+                href="https://www.linkedin.com/in/muthu-g-768a95258"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
             <Button
               className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full transform hover:scale-110 transition-all duration-300 animate-scale-in"
               style={{ animationDelay: "0.2s" }}
             >
               <Linkedin size={24} />
             </Button>
+            </a>
+            {/* <a
+                href= "mailto:muthuganapathi002@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              > */}
             <Button
+              onClick={sendEmail}
+              aria-label="Send email to muthuganapathi002@gmail.com"
               className="bg-cyan-600 hover:bg-cyan-700 text-white p-4 rounded-full transform hover:scale-110 transition-all duration-300 animate-scale-in"
               style={{ animationDelay: "0.4s" }}
             >
               <Mail size={24} />
             </Button>
+            {/* </a> */}
           </div>
           <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-12 py-4 rounded-full text-xl font-semibold transform hover:scale-105 transition-all duration-300 animate-fade-in">
             Get In Touch
@@ -688,9 +731,9 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-400">
+          {/* <p className="text-gray-400">
             © 2024 Flutter Developer Portfolio. Built with React & Tailwind CSS.
-          </p>
+          </p> */}
         </div>
       </footer>
     </div>
