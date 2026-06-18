@@ -73,13 +73,13 @@ const Index = () => {
     },
     {
       name: "React.js",
-      level: 80,
+      level: 55,
       icon: Code,
       color: "from-cyan-500 to-blue-500",
     },
     {
       name: "Vue.js",
-      level: 70,
+      level: 50,
       icon: Zap,
       color: "from-green-500 to-teal-500",
     },
@@ -91,27 +91,33 @@ const Index = () => {
     },
     {
       name: "HTML",
-      level: 60,
+      level: 45,
       icon: Globe,
       color: "from-orange-500 to-red-500",
     },
     {
       name: "CSS",
-      level: 60,
+      level: 45,
       icon: Palette,
       color: "from-pink-500 to-purple-500",
     },
     {
       name: "Mobile Development",
-      level: 95,
+      level: 85,
       icon: Smartphone,
       color: "from-purple-500 to-pink-500",
     },
     {
       name: "Web Development",
-      level: 75,
+      level: 65,
       icon: Monitor,
       color: "from-indigo-500 to-blue-500",
+    },
+    {
+      name: "API Development (PHP & .NET)",
+      level: 40,
+      icon: Wrench,
+      color: "from-indigo-500 to-violet-500",
     },
   ];
 
@@ -152,7 +158,7 @@ const Index = () => {
     {
       name: "Touchmark Descience Pvt Ltd",
       role: "Flutter Developer",
-      duration: "October 2023 - Present",
+      duration: "October 2023 - May 2026",
       description:
         "Developed and optimized cross-platform mobile applications with scalable architecture, offline support, and secure authentication. Ensured high performance, reliability, and smooth deployment through CI/CD pipelines.",
       achievements: [
@@ -262,6 +268,26 @@ const Index = () => {
     window.open(gmailUrl, "_blank");
   };
 
+  // New: reliably download PDF from public folder (forces blob download)
+  const downloadResume = async () => {
+    try {
+      const res = await fetch("/MuthuG.pdf", { cache: "no-store" });
+      if (!res.ok) throw new Error("Failed to fetch resume");
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(new Blob([blob], { type: blob.type || "application/pdf" }));
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "MuthuG.pdf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (err) {
+      // Fallback: open in new tab if fetch/download fails
+      window.open("/MuthuG.pdf", "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
       {/* Animated Background */}
@@ -346,7 +372,7 @@ const Index = () => {
             <span className="animate-pulse ml-2">|</span>
           </div>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            With 5+ years of experience in Flutter, React.js, and Vue.js
+            With 6+ years of experience in Flutter, React.js, and Vue.js
             development, I create beautiful, responsive applications that
             deliver exceptional user experiences.
           </p>
@@ -357,9 +383,12 @@ const Index = () => {
             >
               View My Work
             </Button>
+            {/* Use JS fetch to force a blob download (prevents SPA routing returning HTML) */}
             <Button
+              onClick={downloadResume}
               variant="outline"
               className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-3 rounded-full text-lg font-semibold transform hover:scale-105 transition-all duration-300"
+              aria-label="Download CV as PDF"
             >
               Download CV
             </Button>
@@ -395,7 +424,7 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-3 mt-6">
                 <Badge className="bg-cyan-500/20 text-cyan-400 border-cyan-500/30 animate-scale-in">
-                  5+ Years Experience
+                  6+ Years Experience
                 </Badge>
                 <Badge
                   className="bg-blue-500/20 text-blue-400 border-blue-500/30 animate-scale-in"
@@ -692,9 +721,9 @@ const Index = () => {
             Let's create something amazing together!
           </p>
           <div className="flex justify-center gap-6 mb-12">
-            <Button className="bg-gray-800 hover:bg-gray-700 text-white p-4 rounded-full transform hover:scale-110 transition-all duration-300 animate-scale-in">
+            {/* <Button className="bg-gray-800 hover:bg-gray-700 text-white p-4 rounded-full transform hover:scale-110 transition-all duration-300 animate-scale-in">
               <Github size={24} />
-            </Button>
+            </Button> */}
             <a
                 href="https://www.linkedin.com/in/muthu-g-768a95258"
                 target="_blank"
